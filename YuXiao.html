@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简历</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #222;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            height: 150vh;
+            /*
+            background-image: url(''); 
+            background-position: center center; 
+            background-repeat: no-repeat; 
+            background-size: cover; 
+            */
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #333;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            overflow-y: auto;
+            font-size: 24px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 15px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .sidebar ul li:hover {
+            background-color: #444;
+        }
+        .content {
+            margin-left: 300px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .content-section {
+            display: none;
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .content-section.active {
+            display: block;
+        }
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            margin-bottom: 20px;
+        }
+        /*背景视频样式
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 340px;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+            opacity: 0.3;
+        }*/
+        .description {
+            text-align: center;
+            max-width: 800px;
+            font-size: 20px;
+        }
+        #RED{
+            color: rgb(219, 31, 31);
+        }
+    </style>
+</head>
+<body>
+    <!-- 背景视频路径
+    <div class="background-video">
+        <video autoplay muted loop>
+            <source src=".mp4" type="video/mp4">
+        </video>
+    </div>
+    -->
+    <div class="container">
+        <div class="sidebar">
+            <img src="15-23-06-837_512.gif" alt="个人照片" class="profile-photo">
+            <ul>
+                <li onclick="showSection('education')">学业情况</li>
+                <li onclick="showSection('contact')">联系方式</li>
+                <li onclick="showSection('reward')">获奖情况</li>
+                <li onclick="showSection('skills')">个人技能</li>
+                <li onclick="showSection('projects')">项目经历</li>
+            </ul>
+        </div>
+        <div class="content">
+            <div id="education" class="content-section active">
+                <h2>学业情况</h2>
+                <div class="description">
+                    <p><b>2022-2026&nbsp;&nbsp;&nbsp;北京航空航天大学&nbsp;&nbsp;&nbsp;智能制造工程专业&nbsp;&nbsp;&nbsp;大三年级</b></p>
+                    <p><b>前五学期成绩:&nbsp;&nbsp;&nbsp;GPA:3.12/4.0&nbsp;&nbsp;&nbsp;年级96/206&nbsp;&nbsp;&nbsp;专业15/42&nbsp;&nbsp;&nbsp;班级8/22</b></p>
+                    <p><b>&nbsp;&nbsp;&nbsp;算数平均分:83.22&nbsp;&nbsp;&nbsp;年级98/206&nbsp;&nbsp;&nbsp;专业16/42&nbsp;&nbsp;&nbsp;班级8/22</b></p>
+                    <p id="RED"><b>&nbsp;&nbsp;&nbsp;加权平均分:80.43&nbsp;&nbsp;&nbsp;年级94/206&nbsp;&nbsp;&nbsp;专业15/42&nbsp;&nbsp;&nbsp;班级8/22</b></p>
+                </div>
+            </div>
+            <div id="contact" class="content-section">
+                <h2>联系方式</h2>
+                <div class="description">
+                    <p><b>联系电话:18535649162</b></p>
+                    <p><b>QQ邮箱:282273435@qq.com</b></p>
+                    <p><b>北航邮箱:YuXiaoZhiZuo@buaa.edu.cn</b></p>
+                </div>
+            </div>
+            <div id="reward" class="content-section">
+                <h2>获奖情况</h2>
+                <div class="description">
+                    <p id="RED"><b>“冯如杯”竞赛创意赛道一等奖一作</b></p>
+                    <p><b>校级物理竞赛三等奖</b></p>
+                    <p><b>美国大学生数学建模大赛S奖</b></p>
+                </div>
+            </div>
+            <div id="skills" class="content-section">
+                <h2>个人技能</h2>
+                <div class="description">
+                    <p id="RED"><b>软件类:</b></p>
+                    <p><b>利用原生HTML、CSS、JS语言编写过一些前端网页。</b></p>
+                    <p><b>简单尝试过electron、VUE等前端框架。</b></p>
+                    <p><b>接触使用过C语言、C++语言、Python语言等。</b></p>
+                    <p><b>利用Qt做过简单的软件开发。</b></p>
+                    <p><b>利用PyQt完成过Neo4j代码生成器、红外点云数据处理器等小项目。</b></p>
+                    <p><b>利用Android Studio，在kotlin语言下完成“齿轮参数优化工具”APP。</b></p>
+                    <p><b>尝试过华为DevEco Studio开发手机APP。</b></p>
+                    <p><b>尝试过HBuilder X软件下微信小程序的开发。</b></p>
+                    <p><b>熟练运用Axure RP与XD软件完成UI界面的原型设计。</b></p>
+                    <p id="RED"><b>3D类:</b></p>
+                    <p><b>熟练运用solidworks软件建模与装配，独立设计过核酸采样机器人、仿蜘蛛月球车等，团队设计过仿生蜘蛛机器人。</b></p>
+                    <p><b>熟练运用国产CAXA软件，完成过差速器的设计建模、制图与动画仿真。</b></p>
+                    <p><b>熟练运用CloudCompare软件处理和分析点云文件。</b></p>
+                    <p><b>较为熟练地使用Blender软件建模、渲染与动画制作。</b></p>
+                    <p><b>接触使用过AutoCAD软件、ANSYS仿真软件与Adams仿真软件。</b></p>
+                    <p><b>入门学习过Maya与3dmax软件。</b></p>
+                    <p id="RED"><b>其他:</b></p>
+                    <p><b>接触使用过Ps、Pr、Ae、An系列软件，擅长拍摄与剪辑视频。</b></p>
+                    <p><b>尝试过Unity、Godot游戏开发。</b></p>
+                    <p><b>运营了个人公众号【玉箫制作】</b></p>
+                </div>
+            </div>
+            <div id="projects" class="content-section">
+                <h2>项目经历</h2>
+                <div class="description">
+                    <p><b>参加第十八届大学生创新创业训练计划，担任市级项目负责人，</b></p>
+                    <p><b>项目课题为“面向增材制造几何偏差控制的补偿算法”，</b></p>    
+                    <p><b>增长了DOE实验设计、3D打印机操作与维修、实验数据分析、软件开发与团队管理经验。</b></p>    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('.content-section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+            var selectedSection = document.getElementById(sectionId);
+            selectedSection.classList.add('active');
+        }
+    </script>
+</body>
+</html>
