@@ -64,7 +64,7 @@
         .content-section.active {
             display: block;
         }
-        .profile-photo {
+        .photo {
             width: 150px;
             height: 150px;
             border-radius: 50%;
@@ -84,11 +84,69 @@
         }*/
         .description {
             text-align: center;
-            max-width: 800px;
+            width: 1000px;
             font-size: 20px;
+        }
+        .left-right-container {
+            display: flex;
+            width: 1000px;
+            gap: 20px; 
+        }
+        .left-description1 {
+            text-align: center;
+            width: 400px;
+            left: 20px;
+            flex: 1;
+            font-size: 20px;            
+        }
+        .right-image-column1 {
+            text-align: center;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .left-description2 {
+            text-align: center;
+            width: 500px;
+            left: 20px;
+            flex: 1;
+            font-size: 20px;            
+        }
+        .right-image-column2 {
+            text-align: center;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
         #RED{
             color: rgb(219, 31, 31);
+        }
+        #GOLD{
+            color: #FFD700;  /* 基础金色 */
+            text-shadow: 
+                0 0 5px rgba(255, 215, 0, 0.7),
+                0 0 10px rgba(255, 215, 0, 0.5),
+                0 0 15px rgba(255, 215, 0, 0.3);  /* 三层发光效果 */
+            background: linear-gradient(
+                to right,
+                #FFD700,  /* 金色 */
+                #FFEC8B,  /* 浅金色 */
+                #FFD700   /* 回到金色 */
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 2s ease-in-out infinite alternate;
+        }
+        @keyframes shine {
+            from {
+                filter: brightness(1);
+            }
+            to {
+                filter: brightness(1.3);
+            }
         }
     </style>
 </head>
@@ -101,68 +159,111 @@
     </div>
     -->
     <div class="container">
+        <!--导航栏-->
         <div class="sidebar">
-            <img src="15-23-06-837_512.gif" alt="个人照片" class="profile-photo">
+            <img src="15-23-06-837_512.gif" alt="照片" class="photo">
             <ul>
+                <li onclick="showSection('base')">基本信息</li>
                 <li onclick="showSection('education')">学业情况</li>
-                <li onclick="showSection('contact')">联系方式</li>
-                <li onclick="showSection('reward')">获奖情况</li>
+                <li onclick="showSection('reward')">参赛情况</li>
                 <li onclick="showSection('skills')">个人技能</li>
                 <li onclick="showSection('projects')">项目经历</li>
             </ul>
         </div>
+        <!--内容栏-->
         <div class="content">
-            <div id="education" class="content-section active">
-                <h2>学业情况</h2>
-                <div class="description">
-                    <p><b>2022-2026&nbsp;&nbsp;&nbsp;北京航空航天大学&nbsp;&nbsp;&nbsp;智能制造工程专业&nbsp;&nbsp;&nbsp;大三年级</b></p>
-                    <p><b>前五学期成绩:&nbsp;&nbsp;&nbsp;GPA:3.12/4.0&nbsp;&nbsp;&nbsp;年级96/206&nbsp;&nbsp;&nbsp;专业15/42&nbsp;&nbsp;&nbsp;班级8/22</b></p>
-                    <p><b>&nbsp;&nbsp;&nbsp;算数平均分:83.22&nbsp;&nbsp;&nbsp;年级98/206&nbsp;&nbsp;&nbsp;专业16/42&nbsp;&nbsp;&nbsp;班级8/22</b></p>
-                    <p id="RED"><b>&nbsp;&nbsp;&nbsp;加权平均分:80.43&nbsp;&nbsp;&nbsp;年级94/206&nbsp;&nbsp;&nbsp;专业15/42&nbsp;&nbsp;&nbsp;班级8/22</b></p>
+            <!--基本信息-->
+            <div id="base" class="content-section active">
+                <h2>基本信息</h2>
+                <div style="text-align: center;">
+                    <img src="person-5956897_640.jpg" alt="个人照片" class="profile-photo" width="600">
                 </div>
-            </div>
-            <div id="contact" class="content-section">
-                <h2>联系方式</h2>
                 <div class="description">
+                    <p><b>性别:男</b></p>
+                    <p><b>政治面貌:共青团员</b></p>
+                    <p><b>籍贯:山西省晋城市阳城县</b></p>
+                    <p><b>出生日期:2004年3月9日</b></p>
                     <p><b>联系电话:18535649162</b></p>
                     <p><b>QQ邮箱:282273435@qq.com</b></p>
                     <p><b>北航邮箱:YuXiaoZhiZuo@buaa.edu.cn</b></p>
                 </div>
             </div>
-            <div id="reward" class="content-section">
-                <h2>获奖情况</h2>
+            <!--学业情况-->
+            <div id="education" class="content-section">
+                <h2>学业情况</h2>
                 <div class="description">
-                    <p id="RED"><b>“冯如杯”竞赛创意赛道一等奖一作</b></p>
-                    <p><b>校级物理竞赛三等奖</b></p>
-                    <p><b>美国大学生数学建模大赛S奖</b></p>
+                    <p><b>2022-2026&nbsp;&nbsp;&nbsp;北京航空航天大学&nbsp;&nbsp;&nbsp;智能制造工程专业&nbsp;&nbsp;&nbsp;大三年级</b></p>
+                    <p><b>前五学期成绩:&nbsp;&nbsp;&nbsp;GPA:3.12/4.0&nbsp;&nbsp;&nbsp;年级96/206&nbsp;&nbsp;&nbsp;专业15/42&nbsp;&nbsp;&nbsp;班级8/22</b></p>
+                    <p><b>&nbsp;&nbsp;&nbsp;算数平均分:83.22&nbsp;&nbsp;&nbsp;年级98/206&nbsp;&nbsp;&nbsp;专业16/42&nbsp;&nbsp;&nbsp;班级8/22</b></p>
+                    <p id="GOLD"><b>&nbsp;&nbsp;&nbsp;加权平均分:80.43&nbsp;&nbsp;&nbsp;年级94/206&nbsp;&nbsp;&nbsp;专业15/42&nbsp;&nbsp;&nbsp;班级8/22</b></p>
                 </div>
             </div>
+            <!--参赛情况-->
+            <div id="reward" class="content-section">
+                <h2>参赛情况</h2>
+                <div class="left-right-container">
+                    <div class="left-description1">
+                        <p id="RED"><b>参赛经历:</b></p>  
+                        <p><b>大学生创新创业训练计划</b></p>
+                        <p><b>“冯如杯”竞赛创意赛道</b></p>
+                        <p><b>全国大学生数学竞赛</b></p>
+                        <p><b>全国大学生数学建模大赛</b></p>
+                        <p><b>全国大学生物理竞赛</b></p>
+                        <p><b>校级物理竞赛</b></p>
+                        <p><b>美国大学生数学建模大赛</b></p>                  
+                        <p id="RED"><b>获奖情况:</b></p>
+                        <p id="GOLD"><b>“冯如杯”竞赛创意赛道一等奖一作</b></p>
+                        <img src="“冯如杯”竞赛创意赛道一等奖一作.jpg" alt="获奖证书" width="300">
+                        <p><b>校级物理竞赛三等奖</b></p>
+                        <img src="校级物理竞赛三等奖.jpg" alt="获奖证书" width="300">
+                        <p><b>美国大学生数学建模大赛S奖</b></p>
+                        <img src="美赛S奖.jpg" alt="获奖证书" width="300">
+                    </div>
+                    <div class="right-image-column1">
+                        <img src="核酸采样机器人.png" alt="图片1" width="300">
+                        <img src="数模国赛绘图.png" alt="图片2" width="300">
+                        <img src="工作网络图.png" alt="图片3" width="300">
+                    </div>
+                </div>
+            </div>
+            <!--个人技能-->
             <div id="skills" class="content-section">
                 <h2>个人技能</h2>
-                <div class="description">
-                    <p id="RED"><b>软件类:</b></p>
-                    <p><b>利用原生HTML、CSS、JS语言编写过一些前端网页。</b></p>
-                    <p><b>简单尝试过electron、VUE等前端框架。</b></p>
-                    <p><b>接触使用过C语言、C++语言、Python语言等。</b></p>
-                    <p><b>利用Qt做过简单的软件开发。</b></p>
-                    <p><b>利用PyQt完成过Neo4j代码生成器、红外点云数据处理器等小项目。</b></p>
-                    <p><b>利用Android Studio，在kotlin语言下完成“齿轮参数优化工具”APP。</b></p>
-                    <p><b>尝试过华为DevEco Studio开发手机APP。</b></p>
-                    <p><b>尝试过HBuilder X软件下微信小程序的开发。</b></p>
-                    <p><b>熟练运用Axure RP与XD软件完成UI界面的原型设计。</b></p>
-                    <p id="RED"><b>3D类:</b></p>
-                    <p><b>熟练运用solidworks软件建模与装配，独立设计过核酸采样机器人、仿蜘蛛月球车等，团队设计过仿生蜘蛛机器人。</b></p>
-                    <p><b>熟练运用国产CAXA软件，完成过差速器的设计建模、制图与动画仿真。</b></p>
-                    <p><b>熟练运用CloudCompare软件处理和分析点云文件。</b></p>
-                    <p><b>较为熟练地使用Blender软件建模、渲染与动画制作。</b></p>
-                    <p><b>接触使用过AutoCAD软件、ANSYS仿真软件与Adams仿真软件。</b></p>
-                    <p><b>入门学习过Maya与3dmax软件。</b></p>
-                    <p id="RED"><b>其他:</b></p>
-                    <p><b>接触使用过Ps、Pr、Ae、An系列软件，擅长拍摄与剪辑视频。</b></p>
-                    <p><b>尝试过Unity、Godot游戏开发。</b></p>
-                    <p><b>运营了个人公众号【玉箫制作】</b></p>
+                <div class="left-right-container">
+                    <div class="left-description2">
+                        <p id="RED"><b>软件类:</b></p>
+                        <p><b>利用原生HTML、CSS、JS语言编写过一些前端网页。</b></p>
+                        <p><b>简单尝试过electron、VUE等前端框架。</b></p>
+                        <p><b>接触使用过C语言、C++语言、Python语言等。</b></p>
+                        <p><b>利用Qt做过简单的软件开发。</b></p>
+                        <p><b>利用PyQt完成过Neo4j代码生成器、红外点云数据处理器等小项目。</b></p>
+                        <p><b>利用Android Studio，在kotlin语言下完成“齿轮参数优化工具”APP。</b></p>
+                        <p><b>尝试过华为DevEco Studio开发手机APP。</b></p>
+                        <p><b>尝试过HBuilder X软件下微信小程序的开发。</b></p>
+                        <p><b>熟练运用Axure RP与XD软件完成UI界面的原型设计。</b></p>
+                        <p id="RED"><b>3D类:</b></p>
+                        <p><b>熟练运用solidworks软件建模与装配，独立设计过核酸采样机器人、仿蜘蛛月球车等，团队设计过仿生蜘蛛机器人。</b></p>
+                        <p><b>熟练运用国产CAXA软件，完成过差速器的设计建模、制图与动画仿真。</b></p>
+                        <p><b>熟练运用CloudCompare软件处理和分析点云文件。</b></p>
+                        <p><b>较为熟练地使用Blender软件建模、渲染与动画制作。</b></p>
+                        <p><b>接触使用过AutoCAD软件、ANSYS仿真软件与Adams仿真软件。</b></p>
+                        <p><b>入门学习过Maya与3dmax软件。</b></p>
+                        <p id="RED"><b>其他:</b></p>
+                        <p><b>接触使用过Ps、Pr、Ae、An系列软件，擅长拍摄与剪辑视频。</b></p>
+                        <p><b>接触使用过Origin、Draw.io软件进行图表绘制。</b></p>
+                        <p><b>接触使用过minitab软件进行实验设计。</b></p>
+                        <p><b>尝试过Unity、Godot游戏开发。</b></p>
+                        <p><b>运营了个人公众号【玉箫制作】</b></p>
+                    </div>
+                    <div class="right-image-column2">
+                        <img src="Axure原型设计.gif" alt="图片1" width="300">
+                        <img src="花盘轴零件.gif" alt="图片2" width="300">
+                        <img src="闭式斜齿小齿轮轴加载变形动画.gif" alt="图片3" width="300">
+                    </div>
                 </div>
+                
             </div>
+            <!--项目经历-->
             <div id="projects" class="content-section">
                 <h2>项目经历</h2>
                 <div class="description">
