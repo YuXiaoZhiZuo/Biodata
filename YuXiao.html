@@ -150,6 +150,23 @@
         }
     </style>
 </head>
+<script>
+    // 严格的访问控制
+    if (sessionStorage.getItem('authenticated') !== 'true' || 
+        document.referrer.indexOf(window.location.origin) === -1) {
+        window.location.href = 'Password.html';
+    }
+    
+    // 防止后退按钮绕过
+    window.onpageshow = function(event) {
+        if (event.persisted || 
+            (window.performance && window.performance.navigation.type === 2)) {
+            if (sessionStorage.getItem('authenticated') !== 'true') {
+                window.location.href = 'Password.html';
+            }
+        }
+    };
+</script>
 <body>
     <!-- 背景视频路径
     <div class="background-video">
@@ -161,7 +178,7 @@
     <div class="container">
         <!--导航栏-->
         <div class="sidebar">
-            <img src="15-23-06-837_512.gif" alt="照片" class="photo">
+            <img src="res\15-23-06-837_512.gif" alt="照片" class="photo">
             <ul>
                 <li onclick="showSection('base')">基本信息</li>
                 <li onclick="showSection('education')">学业情况</li>
@@ -176,7 +193,7 @@
             <div id="base" class="content-section active">
                 <h2>基本信息</h2>
                 <div style="text-align: center;">
-                    <img src="person-5956897_640.jpg" alt="个人照片" class="profile-photo" width="600">
+                    <img src="res\me.png" alt="个人照片" class="profile-photo" width="300">
                 </div>
                 <div class="description">
                     <p><b>性别:男</b></p>
@@ -213,16 +230,16 @@
                         <p><b>美国大学生数学建模大赛</b></p>                  
                         <p id="RED"><b>获奖情况:</b></p>
                         <p id="GOLD"><b>“冯如杯”竞赛创意赛道一等奖一作</b></p>
-                        <img src="reward1.jpg" alt="获奖证书" width="300">
+                        <img src="res\reward1.jpg" alt="获奖证书" width="300">
                         <p><b>校级物理竞赛三等奖</b></p>
-                        <img src="reward2.jpg" alt="获奖证书" width="300">
+                        <img src="res\reward2.jpg" alt="获奖证书" width="300">
                         <p><b>美国大学生数学建模大赛S奖</b></p>
-                        <img src="reward3.jpg" alt="获奖证书" width="300">
+                        <img src="res\reward3.jpg" alt="获奖证书" width="300">
                     </div>
                     <div class="right-image-column1">
-                        <img src="p1.png" alt="图片1" width="300">
-                        <img src="p2.png" alt="图片2" width="300">
-                        <img src="p3.png" alt="图片3" width="300">
+                        <img src="res/p1.png" alt="图片1" width="300">
+                        <img src="res/p2.png" alt="图片2" width="300">
+                        <img src="res/p3.png" alt="图片3" width="300">
                     </div>
                 </div>
             </div>
@@ -256,9 +273,9 @@
                         <p><b>运营了个人公众号【玉箫制作】</b></p>
                     </div>
                     <div class="right-image-column2">
-                        <img src="g1.gif" alt="图片1" width="300">
-                        <img src="g2.gif" alt="图片2" width="300">
-                        <img src="g3.gif" alt="图片3" width="300">
+                        <img src="res/g1.gif" alt="图片1" width="300">
+                        <img src="res/g2.gif" alt="图片2" width="300">
+                        <img src="res/g3.gif" alt="图片3" width="300">
                     </div>
                 </div>
                 
