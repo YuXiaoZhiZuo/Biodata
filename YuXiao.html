@@ -11,8 +11,10 @@
             padding: 0;
             background-color: #222;
             color: #fff;
-            overflow-x: hidden;
+            /*overflow-x: hidden;*/
         }
+
+        /* 总容器样式 */
         .container {
             display: flex;
             height: 150vh;
@@ -23,6 +25,8 @@
             background-size: cover; 
             */
         }
+
+        /* 导航栏样式 */
         .sidebar {
             width: 200px;
             background-color: #333;
@@ -45,6 +49,8 @@
         .sidebar ul li:hover {
             background-color: #444;
         }
+
+        /* 内容栏外样式 */
         .content {
             margin-left: 300px;
             padding: 20px;
@@ -53,6 +59,7 @@
             justify-content: flex-start;
             align-items: center;
         }
+        /* 内容栏内样式 */
         .content-section {
             display: none;
             width: 100%;
@@ -64,6 +71,8 @@
         .content-section.active {
             display: block;
         }
+
+        /* 左上角照片样式 */
         .photo {
             width: 150px;
             height: 150px;
@@ -71,6 +80,7 @@
             border: 3px solid #fff;
             margin-bottom: 20px;
         }
+
         /*背景视频样式
         .background-video {
             position: fixed;
@@ -82,16 +92,21 @@
             object-fit: cover;
             opacity: 0.3;
         }*/
+
+        /* 信息栏样式 */
         .description {
             text-align: center;
             width: 1000px;
             font-size: 20px;
         }
+
+        /* 左右布局样式 */
         .left-right-container {
             display: flex;
             width: 1000px;
             gap: 20px; 
         }
+        /* 左侧信息区样式1 */
         .left-description1 {
             text-align: center;
             width: 400px;
@@ -99,6 +114,7 @@
             flex: 1;
             font-size: 20px;            
         }
+        /* 右侧图片区样式1 */
         .right-image-column1 {
             text-align: center;
             width: 400px;
@@ -106,6 +122,7 @@
             flex-direction: column;
             gap: 20px;
         }
+        /* 左侧信息区样式2 */
         .left-description2 {
             text-align: center;
             width: 500px;
@@ -113,6 +130,7 @@
             flex: 1;
             font-size: 20px;            
         }
+        /* 右侧图片区样式2 */
         .right-image-column2 {
             text-align: center;
             width: 300px;
@@ -120,9 +138,43 @@
             flex-direction: column;
             gap: 20px;
         }
+
+        /* 表格样式 */
+        .education-table {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e0e0e0;
+            border-radius: 3px;
+            overflow: hidden;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .table-row {
+            display: flex;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .table-row:last-child {
+            border-bottom: none;
+        }
+        .table-col {
+            flex: 1;
+            padding: 12px 15px;
+            text-align: center;
+        }
+        .header {/* 表头样式 */
+            background-color: #eac13b;
+            font-weight: bold;
+        }
+        .highlight {/* 高亮行 */
+            background-color: #e56666; 
+        }
+
+        /* 红色标注文字 */
         #RED{
             color: rgb(219, 31, 31);
         }
+
+        /* 金色闪光标注文字 */
         #GOLD{
             color: #FFD700;  /* 基础金色 */
             text-shadow: 
@@ -148,6 +200,7 @@
                 filter: brightness(1.3);
             }
         }
+
     </style>
 </head>
 <script>
@@ -209,10 +262,81 @@
             <div id="education" class="content-section">
                 <h2>学业情况</h2>
                 <div class="description">
+                    <p><b>2010-2016&nbsp;&nbsp;&nbsp;阳城县实验小学&nbsp;&nbsp;&nbsp;小学学历</b></p>
+                    <p><b>2016-2019&nbsp;&nbsp;&nbsp;阳城县第三中学&nbsp;&nbsp;&nbsp;初中学历</b></p>
+                    <p><b>2019-2022&nbsp;&nbsp;&nbsp;阳城县第一中学&nbsp;&nbsp;&nbsp;高中学历</b></p>
                     <p><b>2022-2026&nbsp;&nbsp;&nbsp;北京航空航天大学&nbsp;&nbsp;&nbsp;智能制造工程专业&nbsp;&nbsp;&nbsp;大三年级</b></p>
                     <p><b>前五学期成绩:&nbsp;&nbsp;&nbsp;GPA:3.12/4.0&nbsp;&nbsp;&nbsp;年级96/206&nbsp;&nbsp;&nbsp;专业15/42&nbsp;&nbsp;&nbsp;班级8/22</b></p>
                     <p><b>&nbsp;&nbsp;&nbsp;算数平均分:83.22&nbsp;&nbsp;&nbsp;年级98/206&nbsp;&nbsp;&nbsp;专业16/42&nbsp;&nbsp;&nbsp;班级8/22</b></p>
-                    <p id="GOLD"><b>&nbsp;&nbsp;&nbsp;加权平均分:80.43&nbsp;&nbsp;&nbsp;年级94/206&nbsp;&nbsp;&nbsp;专业15/42&nbsp;&nbsp;&nbsp;班级8/22</b></p>
+                    <p id="RED"><b>&nbsp;&nbsp;&nbsp;加权平均分:80.43&nbsp;&nbsp;&nbsp;年级94/206&nbsp;&nbsp;&nbsp;专业15/42&nbsp;&nbsp;&nbsp;班级8/22</b></p><br>
+                    <!-- 成绩表格 -->
+                    <div class="education-table">
+                        <div class="table-row header">
+                            <div class="table-col">成绩类型</div>
+                            <div class="table-col">分数</div>
+                            <div class="table-col">年级排名</div>
+                            <div class="table-col">专业排名</div>
+                            <div class="table-col">班级排名</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-col">GPA</div>
+                            <div class="table-col">3.12/4.0</div>
+                            <div class="table-col">96/206</div>
+                            <div class="table-col">15/42</div>
+                            <div class="table-col">8/22</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-col">算数平均分</div>
+                            <div class="table-col">83.22</div>
+                            <div class="table-col">98/206</div>
+                            <div class="table-col">16/42</div>
+                            <div class="table-col">8/22</div>
+                        </div>
+                        <div class="table-row highlight">
+                            <div class="table-col">加权平均分</div>
+                            <div class="table-col">80.43</div>
+                            <div class="table-col">94/206</div>
+                            <div class="table-col">15/42</div>
+                            <div class="table-col">8/22</div>
+                        </div>
+                    </div>
+                    <br>
+                    <p><b>高分学科（90分以上，思修、安全、军理等课程忽略不计）：</b></p>
+                    <!-- 高分学科表格 -->
+                    <div class="education-table">
+                        <div class="table-row header">
+                            <div class="table-col">学科</div>
+                            <div class="table-col">分数</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-col">工程图学（1）</div>
+                            <div class="table-col">95分</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-col">工程图学（2）</div>
+                            <div class="table-col">94分</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-col">机械工程技术训练B</div>
+                            <div class="table-col">91分</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-col">航空航天制造工程基础（1）</div>
+                            <div class="table-col">92分</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-col">运筹学B</div>
+                            <div class="table-col">93分</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-col">电路测试（2）</div>
+                            <div class="table-col">90分</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-col" id="GOLD"><b>工业工程原理与应用</b></div>
+                            <div class="table-col" id="GOLD"><b>99分</b></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!--参赛情况-->
@@ -252,9 +376,9 @@
                     <div class="left-description2">
                         <p id="RED"><b>软件类:</b></p>
                         <p><b>利用原生HTML、CSS、JS语言编写过一些前端网页。</b></p>
-                        <p><b>简单尝试过electron、VUE等前端框架。</b></p>
-                        <p><b>接触使用过C语言、C++语言、Python语言等。</b></p>
-                        <p><b>利用Qt做过简单的软件开发。</b></p>
+                        <p><b>简单尝试过electron&nbsp;<img src="res/electron.jpg" alt="展示图片" width="20">、VUE&nbsp;<img src="res/VUE.jpg" alt="展示图片" width="25">等前端框架。</b></p>
+                        <p><b>接触使用过C语言&nbsp;<img src="res/C.png" alt="展示图片" width="25">、C++语言&nbsp;<img src="res/C++.png" alt="展示图片" width="25">、Python语言&nbsp;<img src="res/python.png" alt="展示图片" width="30">等。</b></p>
+                        <p><b>利用Qt&nbsp;<img src="res/Qt.jpg" alt="展示图片" width="25">做过简单的软件开发。</b></p>
                         <p><b>利用PyQt完成过Neo4j代码生成器、红外点云数据处理器等小项目。</b></p>
                         <p><b>利用Android Studio，在kotlin语言下完成“齿轮参数优化工具”APP。</b></p>
                         <p><b>尝试过华为DevEco Studio开发手机APP。</b></p>
@@ -273,15 +397,18 @@
                         <p><b>接触使用过minitab软件进行实验设计。</b></p>
                         <p><b>尝试过Unity、Godot游戏开发。</b></p>
                         <p><b>运营了个人公众号【玉箫制作】</b></p>
+                        <img src="res/gongzhong.jpg" alt="展示图片" width="400">
                     </div>
                     <div class="right-image-column2">
-                        <img src="res/g1.gif" alt="图片1" width="300">
-                        <img src="res/caipu.gif" alt="图片2" width="300">
-                        <img src="res/g2.gif" alt="图片3" width="300">
-                        <img src="res/g3.gif" alt="图片4" width="300">
-                        <img src="res/spider.gif" alt="图片5" width="300">
-                        <img src="res/blender.gif" alt="图片6" width="300">
-                        <img src="res/gongzhong.jpg" alt="图片7" width="300">
+                        <img src="res/g1.gif" alt="展示图片" width="300">
+                        <img src="res/caipu.gif" alt="展示图片" width="300">
+                        <img src="res/GDCTFAM.gif" alt="展示图片" width="300">
+                        <img src="res/dianyun.gif" alt="展示图片" width="300">
+                        <img src="res/Android.gif" alt="展示图片" width="300">
+                        <img src="res/g2.gif" alt="展示图片" width="300">
+                        <img src="res/g3.gif" alt="展示图片" width="300">
+                        <img src="res/spider.gif" alt="展示图片" width="300">
+                        <img src="res/blender.gif" alt="展示图片" width="300">
                     </div>
                 </div>
                 
