@@ -52,7 +52,7 @@
 
         /* 内容栏外样式 */
         .content {
-            margin-left: 300px;
+            margin-left: 280px;
             padding: 20px;
             display: flex;
             flex-direction: column;
@@ -63,7 +63,7 @@
         .content-section {
             display: none;
             width: 100%;
-            padding: 20px;
+            padding: 30px;
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             margin-bottom: 20px;
@@ -96,15 +96,15 @@
         /* 信息栏样式 */
         .description {
             text-align: center;
-            width: 1000px;
+            width: 1050px;
             font-size: 20px;
         }
 
         /* 左右布局样式 */
         .left-right-container {
             display: flex;
-            width: 1000px;
-            gap: 20px; 
+            width: 1050px;
+            gap: 60px; 
         }
         /* 左侧信息区样式1 */
         .left-description1 {
@@ -117,15 +117,21 @@
         /* 右侧图片区样式1 */
         .right-image-column1 {
             text-align: center;
-            width: 400px;
+            width: 300px;
             display: flex;
             flex-direction: column;
             gap: 20px;
+            background: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin: auto;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 20px;
         }
         /* 左侧信息区样式2 */
         .left-description2 {
             text-align: center;
-            width: 500px;
+            width: 600px;
             left: 20px;
             flex: 1;
             font-size: 20px;            
@@ -136,7 +142,13 @@
             width: 300px;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 30px;
+            background: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin: auto;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 20px;
         }
 
         /* 表格样式 */
@@ -146,7 +158,7 @@
             border: 1px solid #e0e0e0;
             border-radius: 3px;
             overflow: hidden;
-            margin: 20px 0;
+            margin: auto;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         .table-row {
@@ -167,6 +179,78 @@
         }
         .highlight {/* 高亮行 */
             background-color: #e56666; 
+        }
+
+        /* 暗黑风格雷达图容器 */
+        .skills-dashboard {
+            background: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
+            width: 550px;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin: auto;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        /* 雷达图网格布局 */
+        .radar-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+        }
+        /* 暗黑卡片设计 */
+        .radar-card {
+            background: rgba(30, 30, 30, 0.8);
+            border-radius: 12px;
+            width: 500px;
+            margin: auto;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .radar-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+            background: rgba(40, 40, 40, 0.8);
+        }
+        /* 文字优化 */
+        .radar-card h3 {
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        /* 图例优化 */
+        .radar-legend {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        .radar-legend span {
+            color: #e0e0e0;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+        }
+        .dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+            box-shadow: 0 0 8px currentColor;
+        }
+        /* 雷达图网格线优化 */
+        canvas {
+            width: 400px !important;  
+            height: 400px !important; 
+            margin: 0 auto; 
+            filter: drop-shadow(0 0 8px rgba(255,255,255,0.1));
         }
 
         /* 红色标注文字 */
@@ -203,23 +287,7 @@
 
     </style>
 </head>
-<script>
-    // 严格的访问控制
-    if (sessionStorage.getItem('authenticated') !== 'true' || 
-        document.referrer.indexOf(window.location.origin) === -1) {
-        window.location.href = 'Password.html';
-    }
-    
-    // 防止后退按钮绕过
-    window.onpageshow = function(event) {
-        if (event.persisted || 
-            (window.performance && window.performance.navigation.type === 2)) {
-            if (sessionStorage.getItem('authenticated') !== 'true') {
-                window.location.href = 'Password.html';
-            }
-        }
-    };
-</script>
+
 <body>
     <!-- 背景视频路径
     <div class="background-video">
@@ -376,28 +444,66 @@
                     <div class="left-description2">
                         <p id="RED"><b>软件类:</b></p>
                         <p><b>利用原生HTML、CSS、JS语言编写过一些前端网页。</b></p>
-                        <p><b>简单尝试过electron&nbsp;<img src="res/electron.jpg" alt="展示图片" width="20">、VUE&nbsp;<img src="res/VUE.jpg" alt="展示图片" width="25">等前端框架。</b></p>
-                        <p><b>接触使用过C语言&nbsp;<img src="res/C.png" alt="展示图片" width="25">、C++语言&nbsp;<img src="res/C++.png" alt="展示图片" width="25">、Python语言&nbsp;<img src="res/python.png" alt="展示图片" width="30">等。</b></p>
-                        <p><b>利用Qt&nbsp;<img src="res/Qt.jpg" alt="展示图片" width="25">做过简单的软件开发。</b></p>
-                        <p><b>利用PyQt完成过Neo4j代码生成器、红外点云数据处理器等小项目。</b></p>
-                        <p><b>利用Android Studio，在kotlin语言下完成“齿轮参数优化工具”APP。</b></p>
-                        <p><b>尝试过华为DevEco Studio开发手机APP。</b></p>
-                        <p><b>尝试过HBuilder X软件下微信小程序的开发。</b></p>
-                        <p><b>熟练运用Axure RP与XD软件完成UI界面的原型设计。</b></p>
+                        <p><b>简单尝试过electron&nbsp;<img src="res/electronicon.jpg" alt="展示图片" width="20">、VUE&nbsp;<img src="res/VUEicon.jpg" alt="展示图片" width="25">等前端框架。</b></p>
+                        <p><b>接触使用过C语言&nbsp;<img src="res/Cicon.png" alt="展示图片" width="25">、C++语言&nbsp;<img src="res/C++icon.png" alt="展示图片" width="25">、Python语言&nbsp;<img src="res/pythonicon.png" alt="展示图片" width="30">等。</b></p>
+                        <p><b>利用Qt&nbsp;<img src="res/Qticon.jpg" alt="展示图片" width="25">做过简单的软件开发。</b></p>
+                        <p><b>利用PyQt独立完成过Neo4j代码生成器、红外点云数据处理器等小项目，合作完成了“增材制造几何偏差补偿助手”的开发。</b></p>
+                        <p><b>利用Android Studio&nbsp;<img src="res/Androidicon.png" alt="展示图片" width="30">，在kotlin语言下完成“齿轮参数优化工具”&nbsp;<img src="res/chilunicon.png" alt="展示图片" width="30">手机APP的开发。</b></p>
+                        <p><b>尝试过华为DevEco Studio&nbsp;<img src="res/DevEcoicon.png" alt="展示图片" width="25">开发手机APP。</b></p>
+                        <p><b>尝试过HBuilder X软件&nbsp;<img src="res/HBuildericon.png" alt="展示图片" width="25">下微信小程序的开发。</b></p>
+                        <p><b>熟练运用Axure RP&nbsp;<img src="res/Axureicon.png" alt="展示图片" width="25">与XD软件&nbsp;<img src="res/XDicon.png" alt="展示图片" width="25">完成UI界面的原型设计。</b></p>
+                        <!-- 软件类雷达图 -->
+                        <div class="skills-dashboard">
+                            <div class="radar-container">
+                                <div class="radar-card">
+                                    <h3>编程语言自我评价</h3>
+                                    <canvas id="Radar1"></canvas>
+                                    <div class="radar-legend">
+                                    <span><i class="dot" style="background: #4bc0c0"></i> 使用程度</span>
+                                    <span><i class="dot" style="background: #9966ff"></i> 学习深度</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="skills-dashboard">
+                            <div class="radar-container">
+                                <div class="radar-card">
+                                    <h3>软件框架自我评价</h3>
+                                    <canvas id="Radar2"></canvas>
+                                    <div class="radar-legend">
+                                    <span><i class="dot" style="background: #4bc0c0"></i> 使用程度</span>
+                                    <span><i class="dot" style="background: #9966ff"></i> 学习深度</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <p id="RED"><b>3D类:</b></p>
-                        <p><b>熟练运用solidworks软件建模与装配，独立设计过核酸采样机器人、仿蜘蛛月球车等，团队设计过仿生蜘蛛机器人。</b></p>
-                        <p><b>熟练运用国产CAXA软件，完成过差速器的设计建模、制图与动画仿真。</b></p>
-                        <p><b>熟练运用CloudCompare软件处理和分析点云文件。</b></p>
-                        <p><b>较为熟练地使用Blender软件建模、渲染与动画制作。</b></p>
-                        <p><b>接触使用过AutoCAD软件、ANSYS仿真软件与Adams仿真软件。</b></p>
-                        <p><b>入门学习过Maya与3dmax软件。</b></p>
+                        <p><b>熟练运用solidworks软件&nbsp;<img src="res/solidworksicon.png" alt="展示图片" width="25">建模与装配，独立设计过核酸采样机器人、仿蜘蛛月球车等，团队设计过仿生蜘蛛机器人。</b></p>
+                        <p><b>熟练运用CAXA软件&nbsp;<img src="res/CAXAicon.png" alt="展示图片" width="25">，完成过差速器的设计建模、制图与动画仿真。</b></p>
+                        <p><b>熟练运用CloudCompare软件&nbsp;<img src="res/CloudCompareicon.jpg" alt="展示图片" width="25">处理和分析点云文件。</b></p>
+                        <p><b>较为熟练地使用Blender软件&nbsp;<img src="res/Blendericon.png" alt="展示图片" width="25">建模、渲染与动画制作。</b></p>
+                        <p><b>接触使用过AutoCAD软件&nbsp;<img src="res/AutoCADicon.png" alt="展示图片" width="25">、ANSYS软件&nbsp;<img src="res/ANSYSicon.png" alt="展示图片" width="25">与Adams软件&nbsp;<img src="res/Adamsicon.jpg" alt="展示图片" width="25">。</b></p>
+                        <p><b>入门学习过Maya&nbsp;<img src="res/Mayaicon.png" alt="展示图片" width="25">与3dmax软件&nbsp;<img src="res/3dmaxicon.png" alt="展示图片" width="25">。</b></p>
+                        <!-- 3D类雷达图 -->
+                        <div class="skills-dashboard">
+                            <div class="radar-container">
+                                <div class="radar-card">
+                                    <h3>3D自我评价</h3>
+                                    <canvas id="Radar3"></canvas>
+                                    <div class="radar-legend">
+                                    <span><i class="dot" style="background: #ff9f40"></i> 使用程度</span>
+                                    <span><i class="dot" style="background: #ff6384"></i> 学习深度</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <p id="RED"><b>其他:</b></p>
-                        <p><b>接触使用过Ps、Pr、Ae、An系列软件，擅长拍摄与剪辑视频。</b></p>
-                        <p><b>接触使用过Origin、Draw.io软件进行图表绘制。</b></p>
-                        <p><b>接触使用过minitab软件进行实验设计。</b></p>
-                        <p><b>尝试过Unity、Godot游戏开发。</b></p>
+                        <p><b>接触使用过Ps&nbsp;<img src="res/PSicon.png" alt="展示图片" width="25">、Pr&nbsp;<img src="res/PRicon.jpg" alt="展示图片" width="25">、Ae&nbsp;<img src="res/AEicon.png" alt="展示图片" width="25">、An&nbsp;<img src="res/ANicon.png" alt="展示图片" width="25">系列软件，擅长拍摄与剪辑。</b></p>
+                        <p><b>接触使用过Origin&nbsp;<img src="res/Originicon.png" alt="展示图片" width="40">、Draw.io软件&nbsp;<img src="res/Draw.ioicon.png" alt="展示图片" width="25">进行图表绘制。</b></p>
+                        <p><b>接触使用过minitab软件&nbsp;<img src="res/minitabicon.jpg" alt="展示图片" width="25">进行实验设计。</b></p>
+                        <p><b>尝试过Unity&nbsp;<img src="res/Unityicon.png" alt="展示图片" width="25">、Godot&nbsp;<img src="res/Godoticon.png" alt="展示图片" width="25">游戏开发。</b></p>
                         <p><b>运营了个人公众号【玉箫制作】</b></p>
-                        <img src="res/gongzhong.jpg" alt="展示图片" width="400">
                     </div>
                     <div class="right-image-column2">
                         <img src="res/g1.gif" alt="展示图片" width="300">
@@ -407,8 +513,8 @@
                         <img src="res/Android.gif" alt="展示图片" width="300">
                         <img src="res/g2.gif" alt="展示图片" width="300">
                         <img src="res/g3.gif" alt="展示图片" width="300">
-                        <img src="res/spider.gif" alt="展示图片" width="300">
                         <img src="res/blender.gif" alt="展示图片" width="300">
+                        <img src="res/gongzhong.jpg" alt="展示图片" width="300">
                     </div>
                 </div>
                 
@@ -417,14 +523,45 @@
             <div id="projects" class="content-section">
                 <h2>项目经历</h2>
                 <div class="description">
-                    <p><b>参加第十八届大学生创新创业训练计划，担任市级项目负责人，</b></p>
+                    <p><b>大一下参加交通学院STIP科创实践计划，</b></p>
+                    <p><b>科创课题相关“月球建造”，</b></p> 
+                    <p><b>独自完成了3D打印月球车的建模与装配，</b></p> 
+                    <img src="res/spider.gif" alt="展示图片" width="600">  
+                    <p><b>虽然后续计划未能顺利展开，但从中开拓了科创眼界，培养了创新思维。</b></p>
+                    <br>
+                    <p><b>大二下参加为期一年的第十八届大学生创新创业训练计划，担任市级项目负责人，</b></p>
                     <p><b>项目课题为“面向增材制造几何偏差控制的补偿算法”，</b></p>    
-                    <p><b>增长了DOE实验设计、3D打印机操作与维修、实验数据分析、软件开发与团队管理经验。</b></p>    
+                    <p><b>增长了DOE实验设计、3D打印机操作与维修、实验数据分析、软件开发与团队管理经验。</b></p>
+                    <br>
+                    <p><b>大三上参加科研课堂，</b></p>
+                    <p><b>项目主题为“关于中熵合金的试验”，</b></p>
+                    <img src="res/yingbianyun.gif" alt="展示图片" width="600">    
+                    <p><b>了解到了中熵合金的相关材料知识，接触了高温炉、抛磨机、扫描电镜等实验设备。</b></p>    
                 </div>
             </div>
         </div>
     </div>
 
+    <!--安全机制-->
+    <script>
+        // 严格的访问控制
+        if (sessionStorage.getItem('authenticated') !== 'true' || 
+            document.referrer.indexOf(window.location.origin) === -1) {
+            window.location.href = 'Password.html';
+        }
+        
+        // 防止后退按钮绕过
+        window.onpageshow = function(event) {
+            if (event.persisted || 
+                (window.performance && window.performance.navigation.type === 2)) {
+                if (sessionStorage.getItem('authenticated') !== 'true') {
+                    window.location.href = 'Password.html';
+                }
+            }
+        };
+    </script>
+
+    <!--导航栏交互-->
     <script>
         function showSection(sectionId) {
             var sections = document.querySelectorAll('.content-section');
@@ -434,6 +571,122 @@
             var selectedSection = document.getElementById(sectionId);
             selectedSection.classList.add('active');
         }
+    </script>
+
+    <!--雷达图-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const Ctx1 = document.getElementById('Radar1').getContext('2d');
+        const Ctx2 = document.getElementById('Radar2').getContext('2d');
+        const Ctx3 = document.getElementById('Radar3').getContext('2d');
+        const radarOptions = {
+            scales: {
+                r: {
+                angleLines: {
+                    color: 'rgba(255, 255, 255, 0.1)'
+                },
+                grid: {
+                    color: 'rgba(255, 255, 255, 0.1)'
+                },
+                pointLabels: {
+                    color: '#b0b0b0',
+                    font: {
+                    size: 11,
+                    family: 'Arial'
+                    }
+                },
+                suggestedMin: 0,
+                suggestedMax: 100,
+                ticks: {
+                    display: false,
+                    backdropColor: 'transparent'
+                }
+                }
+            },
+            plugins: {
+                legend: {
+                display: false // 使用自定义图例
+                }
+            }
+        };
+
+        // 软件类雷达图1
+        new Chart(Ctx1, {
+        type: 'radar',
+        data: {
+            labels: ['Python', 'JavaScript', 'HTML', 'CSS', 'C语言', 'C++'],
+            datasets: [{
+            label: '使用程度',
+            data: [90, 70, 90, 90, 60, 80],
+            backgroundColor: 'rgba(100, 220, 220, 0.15)',
+            borderColor: '#64dcff',
+            borderWidth: 1.5,
+            pointBackgroundColor: '#64dcff',
+            pointBorderColor: '#000'
+            }, {
+            label: '学习深度',
+            data: [60, 50, 80, 80, 70, 60],
+            backgroundColor: 'rgba(180, 120, 255, 0.15)',
+            borderColor: '#b478ff',
+            borderWidth: 1.5,
+            pointBackgroundColor: '#b478ff',
+            pointBorderColor: '#000'
+            }]
+        },
+        options: radarOptions
+        });
+
+        // 软件类雷达图2
+        new Chart(Ctx2, {
+        type: 'radar',
+        data: {
+            labels: ['Qt', 'PyQt', 'electron', 'VUE', 'Android Studio', 'DevEco Studio', 'HBuilder X', 'Axure RP', 'XD'],
+            datasets: [{
+            label: '使用程度',
+            data: [75, 90, 35, 30, 70, 40, 20, 75, 70],
+            backgroundColor: 'rgba(100, 220, 220, 0.15)',
+            borderColor: '#64dcff',
+            borderWidth: 1.5,
+            pointBackgroundColor: '#64dcff',
+            pointBorderColor: '#000'
+            }, {
+            label: '学习深度',
+            data: [65, 75, 35, 45, 75, 65, 35, 90, 90],
+            backgroundColor: 'rgba(180, 120, 255, 0.15)',
+            borderColor: '#b478ff',
+            borderWidth: 1.5,
+            pointBackgroundColor: '#b478ff',
+            pointBorderColor: '#000'
+            }]
+        },
+        options: radarOptions
+        });
+
+        // 3D类雷达图
+        new Chart(Ctx3, {
+        type: 'radar',
+        data: {
+            labels: ['solidworks', 'CAXA', 'CloudCompare', 'Blender', 'AutoCAD', 'ANSYS', 'Adams', 'Maya', '3dmax'],
+            datasets: [{
+            label: '使用程度',
+            data: [90, 90, 80, 90, 30, 60, 20, 40, 40],
+            backgroundColor: 'rgba(255, 180, 70, 0.15)',
+            borderColor: '#ffb446',
+            borderWidth: 1.5,
+            pointBackgroundColor: '#ffb446',
+            pointBorderColor: '#000'
+            }, {
+            label: '学习深度',
+            data: [85, 85, 90, 70, 70, 60, 25, 60, 60],
+            backgroundColor: 'rgba(255, 100, 150, 0.15)',
+            borderColor: '#ff6496',
+            borderWidth: 1.5,
+            pointBackgroundColor: '#ff6496',
+            pointBorderColor: '#000'
+            }]
+        },
+        options: radarOptions
+        });
     </script>
 </body>
 </html>
