@@ -258,13 +258,18 @@
             color: rgb(219, 31, 31);
         }
 
+        /* 橘色标注文字 */
+        #ORANGE {
+            color: rgb(252, 169, 4); 
+        }
+
         /* 金色闪光标注文字 */
         #GOLD{
             color: #FFD700;  /* 基础金色 */
             text-shadow: 
-                0 0 5px rgba(255, 215, 0, 0.7),
-                0 0 10px rgba(255, 215, 0, 0.5),
-                0 0 15px rgba(255, 215, 0, 0.3);  /* 三层发光效果 */
+                0 0 3px rgba(255, 215, 0, 0.7),
+                0 0 8px rgba(255, 215, 0, 0.5),
+                0 0 13px rgba(255, 215, 0, 0.3);  /* 三层发光效果 */
             background: linear-gradient(
                 to right,
                 #FFD700,  /* 金色 */
@@ -330,11 +335,14 @@
             <div id="education" class="content-section">
                 <h2>学业情况</h2>
                 <div class="description">
+                    <p id="ORANGE"><b>【学生经历】：</b></p>
                     <p><b>2010-2016&nbsp;&nbsp;&nbsp;阳城县实验小学&nbsp;&nbsp;&nbsp;小学学历</b></p>
                     <p><b>2016-2019&nbsp;&nbsp;&nbsp;阳城县第三中学&nbsp;&nbsp;&nbsp;初中学历</b></p>
                     <p><b>2019-2022&nbsp;&nbsp;&nbsp;阳城县第一中学&nbsp;&nbsp;&nbsp;高中学历</b></p>
                     <p><b>2022-2026&nbsp;&nbsp;&nbsp;北京航空航天大学&nbsp;&nbsp;&nbsp;智能制造工程专业&nbsp;&nbsp;&nbsp;大三年级</b></p>
-                    <p><b>前五学期成绩:&nbsp;&nbsp;&nbsp;GPA:3.12/4.0&nbsp;&nbsp;&nbsp;年级96/206&nbsp;&nbsp;&nbsp;专业15/42&nbsp;&nbsp;&nbsp;班级8/22</b></p>
+                    <br>
+                    <p id="ORANGE"><b>【大学前五学期成绩】:</b></p>
+                    <p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GPA:3.12/4.0&nbsp;&nbsp;&nbsp;年级96/206&nbsp;&nbsp;&nbsp;专业15/42&nbsp;&nbsp;&nbsp;班级8/22</b></p>
                     <p><b>&nbsp;&nbsp;&nbsp;算数平均分:83.22&nbsp;&nbsp;&nbsp;年级98/206&nbsp;&nbsp;&nbsp;专业16/42&nbsp;&nbsp;&nbsp;班级8/22</b></p>
                     <p id="RED"><b>&nbsp;&nbsp;&nbsp;加权平均分:80.43&nbsp;&nbsp;&nbsp;年级94/206&nbsp;&nbsp;&nbsp;专业15/42&nbsp;&nbsp;&nbsp;班级8/22</b></p><br>
                     <!-- 成绩表格 -->
@@ -369,7 +377,7 @@
                         </div>
                     </div>
                     <br>
-                    <p><b>高分学科（90分以上，思修、安全、军理等课程忽略不计）：</b></p>
+                    <p id="ORANGE"><b>【高分学科】（选取90分以上，思修、安全、军理等课程忽略不计）：</b></p>
                     <!-- 高分学科表格 -->
                     <div class="education-table">
                         <div class="table-row header">
@@ -405,6 +413,17 @@
                             <div class="table-col" id="GOLD"><b>99分</b></div>
                         </div>
                     </div>
+                    <br><br>
+                    <p id="ORANGE"><b>【学生工作】：</b></p>
+                    <p><b>大一上担任学业发展中心助学部部员，负责助学天团部分工作。</b></p>
+                    <p><b>大二期间曾任小班组织委员兼生活委员。</b></p>
+                    <p><b>大三期间曾任小班实践委员。</b></p>
+                    <br>
+                    <p id="ORANGE"><b>【社会实践】：</b></p>
+                    <p><b>大一寒假参加远航路上返校宣讲实践队，回到高中母校进行宣讲。</b></p>
+                    <p><b>大一暑假参加返乡实践队，到乡村中学开展交流会。</b></p>
+                    <p><b>大二寒假参加返乡实践队，走访皇城村村委与企业工厂，深入调查乡村经济发展转型道路。</b></p>
+                    <p><b>大二暑假参加湘西民族风迹实践队，前往湖南怀化一带，感受苗族侗族风情。</b></p>
                 </div>
             </div>
             <!--参赛情况-->
@@ -412,7 +431,7 @@
                 <h2>参赛情况</h2>
                 <div class="left-right-container">
                     <div class="left-description1">
-                        <p id="RED"><b>参赛经历:</b></p>  
+                        <p id="ORANGE"><b>【参赛经历】:</b></p>  
                         <p><b>互联网+竞赛（进行中）</b></p>
                         <p><b>大学生创新创业训练计划</b></p>
                         <p><b>全国3D大赛（进行中）</b></p>
@@ -424,7 +443,7 @@
                         <p><b>全国大学生物理竞赛</b></p>
                         <p><b>校级物理竞赛</b></p>
                         <p><b>美国大学生数学建模大赛</b></p>            
-                        <p id="RED"><b>获奖情况:</b></p>
+                        <p id="ORANGE"><b>【获奖情况】:</b></p>
                         <p id="GOLD"><b>“冯如杯”竞赛创意赛道一等奖一作</b></p>
                         <img src="res\reward1.jpg" alt="获奖证书" width="300">
                         <p><b>校级物理竞赛三等奖</b></p>
@@ -451,7 +470,7 @@
                 <h2>个人技能</h2>
                 <div class="left-right-container">
                     <div class="left-description2">
-                        <p id="RED"><b>软件类:</b></p>
+                        <p id="ORANGE"><b>【软件类】:</b></p>
                         <p><b>利用原生HTML、CSS、JS语言编写过一些前端网页。</b></p>
                         <p><b>简单尝试过electron&nbsp;<img src="res/electronicon.jpg" alt="展示图片" width="20">、VUE&nbsp;<img src="res/VUEicon.jpg" alt="展示图片" width="25">等前端框架。</b></p>
                         <p><b>接触使用过C语言&nbsp;<img src="res/Cicon.png" alt="展示图片" width="25">、C++语言&nbsp;<img src="res/C++icon.png" alt="展示图片" width="25">、Python语言&nbsp;<img src="res/pythonicon.png" alt="展示图片" width="30">等。</b></p>
@@ -488,7 +507,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p id="RED"><b>3D类:</b></p>
+                        <p id="ORANGE"><b>【3D类】:</b></p>
                         <p><b>熟练运用solidworks软件&nbsp;<img src="res/solidworksicon.png" alt="展示图片" width="25">建模与装配，独立设计过核酸采样机器人、仿蜘蛛月球车等，团队设计过仿生蜘蛛机器人。</b></p>
                         <p><b>熟练运用CAXA软件&nbsp;<img src="res/CAXAicon.png" alt="展示图片" width="25">，完成过差速器的设计建模、制图与动画仿真。</b></p>
                         <p><b>熟练运用CloudCompare软件&nbsp;<img src="res/CloudCompareicon.jpg" alt="展示图片" width="25">处理和分析点云文件。</b></p>
@@ -508,7 +527,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p id="RED"><b>其他:</b></p>
+                        <p id="ORANGE"><b>【其他】:</b></p>
                         <p><b>接触使用过Ps&nbsp;<img src="res/PSicon.png" alt="展示图片" width="25">、Pr&nbsp;<img src="res/PRicon.jpg" alt="展示图片" width="25">、Ae&nbsp;<img src="res/AEicon.png" alt="展示图片" width="25">、An&nbsp;<img src="res/ANicon.png" alt="展示图片" width="25">系列软件，擅长拍摄与剪辑。</b></p>
                         <p><b>接触使用过Origin&nbsp;<img src="res/Originicon.png" alt="展示图片" width="40">、Draw.io软件&nbsp;<img src="res/Draw.ioicon.png" alt="展示图片" width="25">进行图表绘制。</b></p>
                         <p><b>接触使用过minitab软件&nbsp;<img src="res/minitabicon.jpg" alt="展示图片" width="25">进行实验设计。</b></p>
@@ -547,7 +566,7 @@
                     <p><b>独自完成了3D打印月球车的建模与装配，</b></p> 
                     <p><b>虽然后续计划未能顺利展开，但从中开拓了科创眼界，培养了创新思维。</b></p>
                     <img src="res/spider.gif" alt="展示图片" width="600">
-                    <br>
+                    <br><br><br>
                     <p><b>大二下参加为期一年的第十八届大学生创新创业训练计划，担任市级项目负责人，</b></p>
                     <p><b>项目课题为“面向增材制造几何偏差控制的补偿算法”，</b></p>    
                     <p><b>增长了DOE实验设计、3D打印机操作与维修、实验数据分析、软件开发与团队管理经验。</b></p>
@@ -555,7 +574,7 @@
                     <img src="res/p3.png" alt="展示图片" width="1000">
                     <br><br><br>
                     <img src="res/p4.jpg" alt="展示图片" width="1000">
-                    <br>
+                    <br><br>
                     <p><b>大三上参加科研课堂，</b></p>
                     <p><b>项目主题为“关于中熵合金的试验”，</b></p>
                     <img src="res/yingbianyun.gif" alt="展示图片" width="600">    
