@@ -28,31 +28,107 @@
 
         /* 导航栏样式 */
         .sidebar {
-            width: 200px;
-            background-color: #333;
-            padding: 20px;
+            width: 180px;
+            background: linear-gradient(135deg, #181818, #333);
+            padding: 20px 0;
             position: fixed;
             top: 0;
             bottom: 0;
             overflow-y: auto;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: all 0.3s ease;
             font-size: 24px;
         }
+
+        .sidebar-header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .sidebar-header h2 {
+            color: #fff;
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
         .sidebar ul {
             list-style-type: none;
             padding: 0;
+            margin: 0;
         }
+
         .sidebar ul li {
-            padding: 15px;
+            padding: 20px 35px;
             cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: flex;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .sidebar ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background-color: #e3913e;
+            transform: scaleY(0);
+            transition: transform 0.2s ease, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
+            z-index: -1;
+        }
+
+        .sidebar ul li:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .sidebar ul li:hover:before {
+            transform: scaleY(1);
+            width: 100%;
+        }
+
+        .sidebar ul li.active {
+            background-color: rgb(198, 101, 40);
+        }
+
+        .sidebar ul li.active:before {
+            transform: scaleY(1);
+            width: 4px;
+        }
+
+        .sidebar ul li i {
+            margin-right: 15px;
+            color: #c99835;
+            font-size: 1.2rem;
+            min-width: 25px;
             text-align: center;
         }
-        .sidebar ul li:hover {
-            background-color: #444;
+
+        .sidebar ul li span {
+            color: #ecf0f1;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar ul li:hover span {
+            color: #db9e34;
+        }
+
+        .sidebar ul li.active span {
+            color: #db9834;
+            font-weight: 600;
         }
 
         /* 内容栏外样式 */
         .content {
-            margin-left: 280px;
+            margin-left: 220px;
             padding: 20px;
             display: flex;
             flex-direction: column;
@@ -79,6 +155,7 @@
             border-radius: 50%;
             border: 3px solid #fff;
             margin-bottom: 20px;
+            margin-left: 10px;
         }
 
         /*背景视频样式
@@ -96,21 +173,21 @@
         /* 信息栏样式 */
         .description {
             text-align: center;
-            width: 1050px;
+            width: 1120px;
             font-size: 20px;
         }
 
         /* 左右布局样式 */
         .left-right-container {
             display: flex;
-            width: 1050px;
-            gap: 60px; 
+            width: 1120px;
+            gap: 200px; 
         }
         /* 左侧信息区样式1 */
         .left-description1 {
             text-align: center;
             width: 400px;
-            left: 20px;
+            margin-left: 50px;
             flex: 1;
             font-size: 20px;            
         }
@@ -132,7 +209,7 @@
         .left-description2 {
             text-align: center;
             width: 600px;
-            left: 20px;
+            margin-left: 50px;
             flex: 1;
             font-size: 20px;            
         }
@@ -158,7 +235,7 @@
             border: 1px solid #e0e0e0;
             border-radius: 3px;
             overflow: hidden;
-            margin: auto;
+            margin-left: 50px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         .table-row {
@@ -290,6 +367,163 @@
             }
         }
 
+        /* 手机端响应式布局 */
+        @media (max-width: 767px) {
+            /* 调整整体布局 */
+            body {
+                margin: 0;
+                padding: 0;
+                overflow-x: hidden;
+            }
+            img {
+                max-width: 100% !important; 
+                height: auto !important;   
+            }
+            .container {
+                flex-direction: column;
+                height: auto;
+            }
+            /* 导航栏改为顶部固定 */
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            /* 左上角图片调整 */
+            .photo {
+                width: 50%;
+                height: 50%;
+                margin-left: 25%;
+            }
+            /* 导航菜单改为水平排列 */
+            .sidebar ul {
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .sidebar ul li {
+                padding: 10px 10px;
+                font-size: 14px;
+            }
+            /* 内容区域调整 */
+            .content {
+                margin-left: 0;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 10px;
+            }
+            .content-section {
+                width: 100% !important;
+                padding: 15px !important;
+                box-sizing: border-box;
+                border-radius: 0;
+            }
+            /* 描述区域宽度调整 */
+            .description {
+                width: 100%;
+                font-size: 14px;
+            }
+            /* 左右布局改为垂直堆叠 */
+            .left-right-container {
+                flex-direction: column;
+                width: 100%;
+                gap: 20px;
+            }
+            /* 左右区域宽度调整 */
+            .left-description1 {
+                width: 100%;
+                margin-left: 0;
+            }
+            /* 右侧图片区样式1 */
+            .right-image-column1 {
+                text-align: center;
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                background: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
+                box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+                margin: auto;
+                border: 1px solid rgba(255,255,255,0.1);
+                border-radius: 16px;
+                padding: 20px;
+            }
+            /* 左侧信息区样式2 */
+            .left-description2 {
+                width: 100%;
+                margin-left: 0;            
+            }
+            /* 右侧图片区样式2 */
+            .right-image-column2 {
+                text-align: center;
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                background: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
+                box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+                margin: auto;
+                border: 1px solid rgba(255,255,255,0.1);
+                border-radius: 16px;
+                padding: 20px;
+            }
+            /* 表格调整 */
+            .education-table {
+                width: 100%;
+                margin-left: 0;
+                overflow-x: auto;
+            }
+            /* 雷达图容器调整 */
+            .skills-dashboard {
+                width: 100%;
+                padding: 2px;
+            }
+            /* 雷达图网格布局 */
+            .radar-container {
+                display: grid;
+                width: 100%;
+                margin-left: 0;
+                gap: 0;
+            }
+            /* 暗黑卡片设计 */
+            .radar-card {
+                width: 85%;
+                margin-left: 0;
+                padding: 2px;
+            }
+            .radar-card:hover {
+                width: 80%;
+                margin-left: 0;
+                box-sizing: border-box;
+            }
+            /* 图例优化 */
+            .radar-legend {
+                width: 35%;
+                margin-left: 0;
+                gap: 0;
+            }
+            .radar-legend span {
+                width: 80%;
+                margin-left: 0;
+            }
+            /* 雷达图网格线优化 */
+            canvas {
+                width: 300px !important;  
+                height: 300px !important;
+            }
+            /* 图片调整 */
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            /* 项目经历图片调整 */
+            #projects img {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 
@@ -615,7 +849,35 @@
             });
             var selectedSection = document.getElementById(sectionId);
             selectedSection.classList.add('active');
+            if (window.innerWidth <= 767) {
+                window.scrollTo(0, 0);
+            }
         }
+        // 添加点击效果
+        document.querySelectorAll('.sidebar ul li').forEach(item => {
+            item.addEventListener('click', function() {
+                // 移除所有active类
+                document.querySelectorAll('.sidebar ul li').forEach(li => {
+                    li.classList.remove('active');
+                });
+                // 为当前点击项添加active类
+                this.classList.add('active');
+            });
+        });
+
+        // 添加悬停延迟效果
+        let hoverTimer;
+        document.querySelectorAll('.sidebar ul li').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                clearTimeout(hoverTimer);
+                this.style.transform = 'translateX(5px)';
+            });
+            item.addEventListener('mouseleave', function() {
+                hoverTimer = setTimeout(() => {
+                    this.style.transform = 'translateX(0)';
+                }, 200);
+            });
+        });
     </script>
 
     <!--雷达图-->
