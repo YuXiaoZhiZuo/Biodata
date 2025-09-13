@@ -1,0 +1,362 @@
+[
+  {
+    "id": "0001",
+    "name": "HTML",
+    "iconPath": "res/HTMLicon.png",
+    "learning": 4.5,
+    "usage": 5.0,
+    "comment": "原生HTML语言"
+  },
+  {
+    "id": "0002",
+    "name": "CSS",
+    "iconPath": "res/CSSicon.png",
+    "learning": 4.0,
+    "usage": 5.0,
+    "comment": "原生CSS语言"
+  },
+  {
+    "id": "0003",
+    "name": "JavaScript",
+    "iconPath": "res/JSicon.png",
+    "learning": 2.5,
+    "usage": 4.5,
+    "comment": "原生JS语言"
+  },
+  {
+    "id": "0004",
+    "name": "electron",
+    "iconPath": "res/electronicon.jpg",
+    "learning": 0.5,
+    "usage": 0.5,
+    "comment": "前端框架"
+  },
+  {
+    "id": "0005",
+    "name": "VUE",
+    "iconPath": "res/VUEicon.jpg",
+    "learning": 1.0,
+    "usage": 0.5,
+    "comment": "前端框架"
+  },
+  {
+    "id": "0006",
+    "name": "C语言",
+    "iconPath": "res/Cicon.png",
+    "learning": 2.5,
+    "usage": 0.5,
+    "comment": "编程语言"
+  },
+  {
+    "id": "0007",
+    "name": "C++",
+    "iconPath": "res/C++icon.png",
+    "learning": 2.0,
+    "usage": 2.0,
+    "comment": "编程语言"
+  },
+  {
+    "id": "0008",
+    "name": "Python",
+    "iconPath": "res/pythonicon.png",
+    "learning": 3.5,
+    "usage": 5.0,
+    "comment": "编程语言"
+  },
+  {
+    "id": "0009",
+    "name": "Qt",
+    "iconPath": "res/Qticon.jpg",
+    "learning": 2.5,
+    "usage": 2.0,
+    "comment": "软件开发框架"
+  },
+  {
+    "id": "0010",
+    "name": "PyQt",
+    "iconPath": "res/PyQticon.png",
+    "learning": 4.5,
+    "usage": 5.0,
+    "comment": "Python GUI框架"
+  },
+  {
+    "id": "0011",
+    "name": "Android Studio",
+    "iconPath": "res/Androidicon.png",
+    "learning": 3.5,
+    "usage": 1.5,
+    "comment": "安卓开发环境"
+  },
+  {
+    "id": "0012",
+    "name": "DevEco Studio",
+    "iconPath": "res/DevEcoicon.png",
+    "learning": 3.5,
+    "usage": 0.5,
+    "comment": "华为开发环境"
+  },
+  {
+    "id": "0013",
+    "name": "HBuilder X",
+    "iconPath": "res/HBuildericon.png",
+    "learning": 1.5,
+    "usage": 0.5,
+    "comment": "微信小程序开发"
+  },
+  {
+    "id": "0014",
+    "name": "Axure RP",
+    "iconPath": "res/Axureicon.png",
+    "learning": 4.5,
+    "usage": 4.0,
+    "comment": "UI原型设计"
+  },
+  {
+    "id": "0015",
+    "name": "XD",
+    "iconPath": "res/XDicon.png",
+    "learning": 4.5,
+    "usage": 1.0,
+    "comment": "UI设计"
+  },
+  {
+    "id": "0016",
+    "name": "Git",
+    "iconPath": "res/giticon.png",
+    "learning": 2.5,
+    "usage": 1.0,
+    "comment": "版本控制"
+  },
+  {
+    "id": "0017",
+    "name": "Github",
+    "iconPath": "res/githubicon.png",
+    "learning": 3.0,
+    "usage": 4.5,
+    "comment": "代码托管"
+  },
+  {
+    "id": "0018",
+    "name": "Gitee",
+    "iconPath": "res/giteeicon.png",
+    "learning": 2.0,
+    "usage": 1.5,
+    "comment": "代码托管"
+  },
+  {
+    "id": "0019",
+    "name": "VS Code",
+    "iconPath": "res/VScodeicon.png",
+    "learning": 4.0,
+    "usage": 5.0,
+    "comment": "代码编辑器"
+  },
+  {
+    "id": "0020",
+    "name": "PyCharm",
+    "iconPath": "res/Pycharmicon.png",
+    "learning": 4.0,
+    "usage": 5.0,
+    "comment": "Python IDE"
+  },
+  {
+    "id": "0021",
+    "name": "solidworks",
+    "iconPath": "res/solidworksicon.png",
+    "learning": 4.0,
+    "usage": 4.0,
+    "comment": "3D建模与装配"
+  },
+  {
+    "id": "0022",
+    "name": "Catia",
+    "iconPath": "res/Catiaicon.png",
+    "learning": 0.0,
+    "usage": 0.0,
+    "comment": "3D建模与装配"
+  },
+  {
+    "id": "0023",
+    "name": "UG",
+    "iconPath": "res/UGicon.png",
+    "learning": 2.0,
+    "usage": 1.0,
+    "comment": "3D建模与装配"
+  },
+  {
+    "id": "0024",
+    "name": "CAXA",
+    "iconPath": "res/CAXAicon.png",
+    "learning": 4.5,
+    "usage": 4.0,
+    "comment": "设计与制图"
+  },
+  {
+    "id": "0025",
+    "name": "CloudCompare",
+    "iconPath": "res/CloudCompareicon.jpg",
+    "learning": 4.5,
+    "usage": 2.0,
+    "comment": "点云处理"
+  },
+  {
+    "id": "0026",
+    "name": "Blender",
+    "iconPath": "res/Blendericon.png",
+    "learning": 5.0,
+    "usage": 5.0,
+    "comment": "3D建模与渲染"
+  },
+  {
+    "id": "0027",
+    "name": "houdini",
+    "iconPath": "res/houdiniicon.png",
+    "learning": 0.5,
+    "usage": 0.0,
+    "comment": "3D建模与渲染"
+  },
+  {
+    "id": "0028",
+    "name": "AutoCAD",
+    "iconPath": "res/AutoCADicon.png",
+    "learning": 2.5,
+    "usage": 1.0,
+    "comment": "CAD设计"
+  },
+  {
+    "id": "0029",
+    "name": "FreeCAD",
+    "iconPath": "res/FreeCADicon.png",
+    "learning": 3.0,
+    "usage": 1.5,
+    "comment": "CAD设计"
+  },
+  {
+    "id": "0030",
+    "name": "ANSYS",
+    "iconPath": "res/ANSYSicon.png",
+    "learning": 2.0,
+    "usage": 1.5,
+    "comment": "仿真分析"
+  },
+  {
+    "id": "0031",
+    "name": "Adams",
+    "iconPath": "res/Adamsicon.jpg",
+    "learning": 0.5,
+    "usage": 0.5,
+    "comment": "动力学仿真"
+  },
+  {
+    "id": "0032",
+    "name": "Maya",
+    "iconPath": "res/Mayaicon.png",
+    "learning": 2.0,
+    "usage": 0.5,
+    "comment": "3D动画"
+  },
+  {
+    "id": "0033",
+    "name": "3dmax",
+    "iconPath": "res/3dmaxicon.png",
+    "learning": 0.5,
+    "usage": 0.5,
+    "comment": "3D建模"
+  },
+  {
+    "id": "0034",
+    "name": "Photoshop",
+    "iconPath": "res/PSicon.png",
+    "learning": 3.0,
+    "usage": 3.5,
+    "comment": "图像处理"
+  },
+  {
+    "id": "0035",
+    "name": "Premiere",
+    "iconPath": "res/PRicon.jpg",
+    "learning": 1.0,
+    "usage": 0.5,
+    "comment": "视频剪辑"
+  },
+  {
+    "id": "0036",
+    "name": "Davinci",
+    "iconPath": "res/Davinciicon.png",
+    "learning": 1.0,
+    "usage": 0.5,
+    "comment": "视频剪辑"
+  },
+  {
+    "id": "0037",
+    "name": "剪映",
+    "iconPath": "res/jianyingicon.png",
+    "learning": 5.0,
+    "usage": 4.5,
+    "comment": "视频剪辑"
+  },
+  {
+    "id": "0038",
+    "name": "After Effects",
+    "iconPath": "res/AEicon.png",
+    "learning": 1.0,
+    "usage": 0.5,
+    "comment": "视频特效"
+  },
+  {
+    "id": "0039",
+    "name": "Animate",
+    "iconPath": "res/ANicon.png",
+    "learning": 1.5,
+    "usage": 1.0,
+    "comment": "动画制作"
+  },
+  {
+    "id": "0040",
+    "name": "Origin",
+    "iconPath": "res/Originicon.png",
+    "learning": 2.0,
+    "usage": 1.5,
+    "comment": "图表绘制"
+  },
+  {
+    "id": "0041",
+    "name": "Draw.io",
+    "iconPath": "res/Draw.ioicon.png",
+    "learning": 5.0,
+    "usage": 4.0,
+    "comment": "图表绘制"
+  },
+  {
+    "id": "0042",
+    "name": "minitab",
+    "iconPath": "res/minitabicon.jpg",
+    "learning": 3.0,
+    "usage": 1.0,
+    "comment": "实验设计"
+  },
+  {
+    "id": "0043",
+    "name": "Unity",
+    "iconPath": "res/Unityicon.png",
+    "learning": 2.0,
+    "usage": 0.5,
+    "comment": "游戏开发"
+  },
+  {
+    "id": "0044",
+    "name": "Unreal",
+    "iconPath": "res/Unrealicon.png",
+    "learning": 0.0,
+    "usage": 0.0,
+    "comment": "游戏开发"
+  },
+  {
+    "id": "0045",
+    "name": "Godot",
+    "iconPath": "res/Godoticon.png",
+    "learning": 1.5,
+    "usage": 0.5,
+    "comment": "游戏开发"
+  }
+]

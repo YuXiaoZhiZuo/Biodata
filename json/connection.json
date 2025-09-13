@@ -1,0 +1,182 @@
+[
+  {
+    "id": "conn1",
+    "type": "serial",
+    "from": "0019",
+    "to": "0001"
+  },
+  {
+    "id": "conn2",
+    "type": "serial",
+    "from": "0001",
+    "to": "0002"
+  },
+  {
+    "id": "conn3",
+    "type": "serial",
+    "from": "0002",
+    "to": "0003"
+  },
+  {
+    "id": "conn4",
+    "type": "serial",
+    "from": "0019",
+    "to": "0005"
+  },
+  {
+    "id": "conn5",
+    "type": "serial",
+    "from": "0019",
+    "to": "0004"
+  },
+  {
+    "id": "conn6",
+    "type": "serial",
+    "from": "0020",
+    "to": "0008"
+  },
+  {
+    "id": "conn7",
+    "type": "serial",
+    "from": "0008",
+    "to": "0010"
+  },
+  {
+    "id": "conn8",
+    "type": "serial",
+    "from": "0042",
+    "to": "0041"
+  },
+  {
+    "id": "conn9",
+    "type": "serial",
+    "from": "0042",
+    "to": "0040"
+  },
+  {
+    "id": "conn10",
+    "type": "parallel",
+    "from": "0043",
+    "to": "0044"
+  },
+  {
+    "id": "conn11",
+    "type": "parallel",
+    "from": "0045",
+    "to": "0044"
+  },
+  {
+    "id": "conn12",
+    "type": "serial",
+    "from": "0021",
+    "to": "0023"
+  },
+  {
+    "id": "conn13",
+    "type": "serial",
+    "from": "0022",
+    "to": "0023"
+  },
+  {
+    "id": "conn14",
+    "type": "serial",
+    "from": "0021",
+    "to": "0029"
+  },
+  {
+    "id": "conn15",
+    "type": "serial",
+    "from": "0024",
+    "to": "0029"
+  },
+  {
+    "id": "conn16",
+    "type": "serial",
+    "from": "0029",
+    "to": "0025"
+  },
+  {
+    "id": "conn17",
+    "type": "serial",
+    "from": "0029",
+    "to": "0023"
+  },
+  {
+    "id": "conn18",
+    "type": "serial",
+    "from": "0021",
+    "to": "0030"
+  },
+  {
+    "id": "conn19",
+    "type": "serial",
+    "from": "0030",
+    "to": "0031"
+  },
+  {
+    "id": "conn20",
+    "type": "serial",
+    "from": "0028",
+    "to": "0024"
+  },
+  {
+    "id": "conn21",
+    "type": "parallel",
+    "from": "0032",
+    "to": "0026"
+  },
+  {
+    "id": "conn22",
+    "type": "parallel",
+    "from": "0032",
+    "to": "0033"
+  },
+  {
+    "id": "conn23",
+    "type": "parallel",
+    "from": "0027",
+    "to": "0033"
+  },
+  {
+    "id": "conn24",
+    "type": "parallel",
+    "from": "0026",
+    "to": "0027"
+  },
+  {
+    "id": "conn25",
+    "type": "serial",
+    "from": "0036",
+    "to": "0037"
+  },
+  {
+    "id": "conn26",
+    "type": "serial",
+    "from": "0037",
+    "to": "0038"
+  },
+  {
+    "id": "conn27",
+    "type": "serial",
+    "from": "0035",
+    "to": "0037"
+  },
+  {
+    "id": "conn28",
+    "type": "serial",
+    "from": "0034",
+    "to": "0039"
+  },
+  {
+    "id": "conn29",
+    "type": "parallel",
+    "from": "0015",
+    "to": "0014"
+  },
+  {
+    "id": "conn30",
+    "type": "serial",
+    "from": "0012",
+    "to": "0011"
+  }
+]
